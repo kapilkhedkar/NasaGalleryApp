@@ -9,23 +9,39 @@
 /* Begin PBXBuildFile section */
 		418D54F7C2AE60A4BE62B4FF /* Pods_NasaGalleryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39A1F142BB475C0567F6D51 /* Pods_NasaGalleryApp.framework */; };
 		5B08AB5E29026E8B00F5489B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08AB5D29026E8B00F5489B /* AppDelegate.swift */; };
-		5B08AB6029026E8B00F5489B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08AB5F29026E8B00F5489B /* SceneDelegate.swift */; };
-		5B08AB6229026E8B00F5489B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B08AB6129026E8B00F5489B /* ViewController.swift */; };
 		5B08AB6529026E8B00F5489B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B08AB6329026E8B00F5489B /* Main.storyboard */; };
 		5B08AB6729026E8E00F5489B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B08AB6629026E8E00F5489B /* Assets.xcassets */; };
 		5B08AB6A29026E8E00F5489B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B08AB6829026E8E00F5489B /* LaunchScreen.storyboard */; };
+		5B60F6DF2902710E00F26B4A /* ImageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */; };
+		5B60F6E42902720900F26B4A /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6E32902720900F26B4A /* Connectivity.swift */; };
+		5B60F6E8290273BA00F26B4A /* no-internet.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6E6290273B900F26B4A /* no-internet.json */; };
+		5B60F6E9290273BA00F26B4A /* nasa-logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6E7290273BA00F26B4A /* nasa-logo.json */; };
+		5B60F6EC290273D500F26B4A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6EB290273D500F26B4A /* data.json */; };
+		5B60F6EE290273F200F26B4A /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6ED290273F200F26B4A /* ImageData.swift */; };
+		5B60F6F22902925D00F26B4A /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F02902925D00F26B4A /* GridItemCollectionViewCell.swift */; };
+		5B60F6F32902925D00F26B4A /* GridItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */; };
+		5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F4290292B400F26B4A /* CommonFunctions.swift */; };
+		5B60F6F82902939800F26B4A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F72902939800F26B4A /* DataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1745509B064789B98EEEED7E /* Pods-NasaGalleryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaGalleryApp.debug.xcconfig"; path = "Target Support Files/Pods-NasaGalleryApp/Pods-NasaGalleryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5B08AB5A29026E8B00F5489B /* NasaGalleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaGalleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B08AB5D29026E8B00F5489B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B08AB5F29026E8B00F5489B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B08AB6129026E8B00F5489B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B08AB6429026E8B00F5489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B08AB6629026E8E00F5489B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B08AB6929026E8E00F5489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B08AB6B29026E8E00F5489B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewController.swift; sourceTree = "<group>"; };
+		5B60F6E32902720900F26B4A /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		5B60F6E6290273B900F26B4A /* no-internet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-internet.json"; sourceTree = "<group>"; };
+		5B60F6E7290273BA00F26B4A /* nasa-logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nasa-logo.json"; sourceTree = "<group>"; };
+		5B60F6EB290273D500F26B4A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		5B60F6ED290273F200F26B4A /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		5B60F6F02902925D00F26B4A /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B60F6F4290292B400F26B4A /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		5B60F6F72902939800F26B4A /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		7DC8CD614920EBAB28D45A94 /* Pods-NasaGalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaGalleryApp.release.xcconfig"; path = "Target Support Files/Pods-NasaGalleryApp/Pods-NasaGalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		F39A1F142BB475C0567F6D51 /* Pods_NasaGalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaGalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,7 +64,6 @@
 				1745509B064789B98EEEED7E /* Pods-NasaGalleryApp.debug.xcconfig */,
 				7DC8CD614920EBAB28D45A94 /* Pods-NasaGalleryApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +96,95 @@
 		5B08AB5C29026E8B00F5489B /* NasaGalleryApp */ = {
 			isa = PBXGroup;
 			children = (
-				5B08AB5D29026E8B00F5489B /* AppDelegate.swift */,
-				5B08AB5F29026E8B00F5489B /* SceneDelegate.swift */,
-				5B08AB6129026E8B00F5489B /* ViewController.swift */,
-				5B08AB6329026E8B00F5489B /* Main.storyboard */,
-				5B08AB6629026E8E00F5489B /* Assets.xcassets */,
-				5B08AB6829026E8E00F5489B /* LaunchScreen.storyboard */,
 				5B08AB6B29026E8E00F5489B /* Info.plist */,
+				5B60F6F62902936500F26B4A /* Services */,
+				5B60F6E2290271F900F26B4A /* Common */,
+				5B60F6E12902717600F26B4A /* Project Files */,
+				5B60F6E02902711500F26B4A /* Models */,
+				5B60F6DC290270D200F26B4A /* Views */,
+				5B60F6DB290270CB00F26B4A /* Controllers */,
 			);
 			path = NasaGalleryApp;
+			sourceTree = "<group>";
+		};
+		5B60F6DB290270CB00F26B4A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B60F6DC290270D200F26B4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6DD290270D900F26B4A /* Storyboards */,
+				5B60F6F02902925D00F26B4A /* GridItemCollectionViewCell.swift */,
+				5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B60F6DD290270D900F26B4A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B08AB6829026E8E00F5489B /* LaunchScreen.storyboard */,
+				5B08AB6329026E8B00F5489B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5B60F6E02902711500F26B4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6ED290273F200F26B4A /* ImageData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B60F6E12902717600F26B4A /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B08AB5D29026E8B00F5489B /* AppDelegate.swift */,
+				5B08AB6629026E8E00F5489B /* Assets.xcassets */,
+			);
+			path = "Project Files";
+			sourceTree = "<group>";
+		};
+		5B60F6E2290271F900F26B4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6EA290273C600F26B4A /* Data */,
+				5B60F6E52902739B00F26B4A /* Lottie */,
+				5B60F6F4290292B400F26B4A /* CommonFunctions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B60F6E52902739B00F26B4A /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6E7290273BA00F26B4A /* nasa-logo.json */,
+				5B60F6E6290273B900F26B4A /* no-internet.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		5B60F6EA290273C600F26B4A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6EB290273D500F26B4A /* data.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B60F6F62902936500F26B4A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B60F6E32902720900F26B4A /* Connectivity.swift */,
+				5B60F6F72902939800F26B4A /* DataParser.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +247,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B60F6F32902925D00F26B4A /* GridItemCollectionViewCell.xib in Resources */,
 				5B08AB6A29026E8E00F5489B /* LaunchScreen.storyboard in Resources */,
+				5B60F6EC290273D500F26B4A /* data.json in Resources */,
 				5B08AB6729026E8E00F5489B /* Assets.xcassets in Resources */,
+				5B60F6E9290273BA00F26B4A /* nasa-logo.json in Resources */,
 				5B08AB6529026E8B00F5489B /* Main.storyboard in Resources */,
+				5B60F6E8290273BA00F26B4A /* no-internet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,9 +306,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B08AB6229026E8B00F5489B /* ViewController.swift in Sources */,
+				5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */,
+				5B60F6DF2902710E00F26B4A /* ImageGridViewController.swift in Sources */,
 				5B08AB5E29026E8B00F5489B /* AppDelegate.swift in Sources */,
-				5B08AB6029026E8B00F5489B /* SceneDelegate.swift in Sources */,
+				5B60F6F22902925D00F26B4A /* GridItemCollectionViewCell.swift in Sources */,
+				5B60F6E42902720900F26B4A /* Connectivity.swift in Sources */,
+				5B60F6F82902939800F26B4A /* DataParser.swift in Sources */,
+				5B60F6EE290273F200F26B4A /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

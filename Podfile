@@ -7,6 +7,7 @@ target 'NasaGalleryApp' do
 
   # Pods for NasaGalleryApp
 
+pod 'lottie-ios'
 pod 'Alamofire'
 pod 'SwiftyJSON', '~> 4.0'
 pod 'PanModal'

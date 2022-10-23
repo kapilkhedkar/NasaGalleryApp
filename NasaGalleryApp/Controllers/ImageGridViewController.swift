@@ -43,11 +43,11 @@ class ImageGridViewController: UIViewController {
         noInternetAnimationView.loopMode = .loop
         noInternetAnimationView.play()
         
-        retryButton.backgroundColor = UIColor.red
-        retryButton.layer.cornerRadius = 8.0
+        retryButton.backgroundColor = AppStyles.getAppColor(color: .ctaBgColor)
+        retryButton.layer.cornerRadius = AppStyles.itemCornerRadius
         retryButton.layer.masksToBounds = true
-        retryButton.tintColor = UIColor.white
-        retryButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        retryButton.tintColor = AppStyles.getAppColor(color: .ctaTintColor)
+        retryButton.titleLabel?.font = AppStyles.getFontStyle(style: .ctaText)
         
     }
     
@@ -60,10 +60,10 @@ class ImageGridViewController: UIViewController {
             collectionView.isHidden = false
 
             RappleActivityIndicatorView.startAnimating()
-            
+
             self.imageDataArray = DataParser.getImagesData()
             self.collectionView.reloadData()
-            
+
             self.collectionView.performBatchUpdates(nil, completion: {
                 (result) in
                 // ready

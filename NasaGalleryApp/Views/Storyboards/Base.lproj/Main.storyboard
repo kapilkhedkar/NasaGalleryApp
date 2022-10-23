@@ -134,20 +134,26 @@
                                     <constraint firstAttribute="height" constant="40" id="OtN-xF-ujd"/>
                                     <constraint firstAttribute="width" constant="40" id="dQK-dB-pbN"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="ic_back"/>
+                                <state key="normal" image="chevron.left.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="backButtonTapped:" destination="ogE-V2-jsx" eventType="touchUpInside" id="5Me-mO-2Sc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-ss-8Jj">
-                                <rect key="frame" x="373" y="60" width="25" height="25"/>
+                                <rect key="frame" x="358" y="60" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="1dP-or-djD"/>
-                                    <constraint firstAttribute="width" constant="25" id="rtw-ts-fQL"/>
+                                    <constraint firstAttribute="height" constant="40" id="1dP-or-djD"/>
+                                    <constraint firstAttribute="width" constant="40" id="rtw-ts-fQL"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="ic_info"/>
+                                <state key="normal" image="info.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
                                 <connections>
                                     <action selector="infoButtonTapped:" destination="ogE-V2-jsx" eventType="touchUpInside" id="pH5-dh-7K2"/>
                                 </connections>
@@ -185,8 +191,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_back" width="30" height="30"/>
-        <image name="ic_info" width="50" height="50"/>
+        <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

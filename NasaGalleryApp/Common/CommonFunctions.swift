@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+protocol DetailsContentToMainProtocol
+{
+    func updatePageIndex(pageIndex: Int)
+    
+}
+
 class CommonFunctions
 {
     
@@ -38,6 +44,22 @@ class CommonFunctions
         let layout = UICollectionViewCompositionalLayout(section: section)
         
         return layout
+        
+    }
+    
+    class func changeDateFormats(ipDateStr: String, fromFormat: String, toFormat: String)->String
+    {
+        let ipFormatter = DateFormatter()
+        ipFormatter.dateFormat = fromFormat
+        
+        let fetchedDate = ipFormatter.date(from: ipDateStr) ?? Date()
+        
+        let opFormatter = DateFormatter()
+        opFormatter.dateFormat = toFormat
+        
+        let opDate = opFormatter.string(from: fetchedDate)
+        
+        return opDate
         
     }
     

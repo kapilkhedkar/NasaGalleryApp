@@ -13,6 +13,7 @@ class ImageDetailPageViewController: UIPageViewController,UIPageViewControllerDa
     var selectedPageIndex : Int = 0
     var imageDataArray = [ImageDataItem]()
     
+    var pageToMainDelegate : DetailsContentToMainProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class ImageDetailPageViewController: UIPageViewController,UIPageViewControllerDa
         let pageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageDetailContentViewController") as! ImageDetailContentViewController
         pageContentViewController.imageUrl = imageDataArray[index].hdurl
         pageContentViewController.pageIndex = index
+        pageContentViewController.contentToPageDelegate = self
         return pageContentViewController
         
     }
@@ -74,4 +76,12 @@ class ImageDetailPageViewController: UIPageViewController,UIPageViewControllerDa
     }
     */
 
+}
+
+extension ImageDetailPageViewController : DetailsContentToMainProtocol
+{
+    func updatePageIndex(pageIndex: Int) {
+        self.pageToMainDelegate?.updatePageIndex(pageIndex: pageIndex)
+    }
+    
 }

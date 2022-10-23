@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PanModal
 
 class ImageDetailMainViewController: UIViewController {
 
@@ -20,6 +21,14 @@ class ImageDetailMainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
+        
+    }
+    
+    func setupUI()
+    {
+        backButton.tintColor = AppStyles.getAppColor(color: .iconTintColor)
+        infoButton.tintColor = AppStyles.getAppColor(color: .iconTintColor)
         
     }
     
@@ -33,6 +42,9 @@ class ImageDetailMainViewController: UIViewController {
     
     @IBAction func infoButtonTapped(_ sender: UIButton) {
         
+        let detailsBottomSheetVC = DetailsBottomSheetViewController()
+        detailsBottomSheetVC.imageDetails = imageDataArray[selectedPageIndex]
+        self.presentPanModal(detailsBottomSheetVC)
         
     }
     
@@ -50,6 +62,7 @@ class ImageDetailMainViewController: UIViewController {
             let pageVC = segue.destination as! ImageDetailPageViewController
             pageVC.imageDataArray = self.imageDataArray
             pageVC.selectedPageIndex = self.selectedPageIndex
+            pageVC.pageToMainDelegate = self
             
         }
         
@@ -57,4 +70,12 @@ class ImageDetailMainViewController: UIViewController {
     }
     
 
+}
+
+extension ImageDetailMainViewController : DetailsContentToMainProtocol
+{
+    func updatePageIndex(pageIndex: Int) {
+        self.selectedPageIndex = pageIndex
+    }
+    
 }

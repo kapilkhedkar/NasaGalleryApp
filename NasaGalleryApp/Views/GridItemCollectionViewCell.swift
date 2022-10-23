@@ -16,7 +16,7 @@ class GridItemCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        itemImageView.layer.cornerRadius = 8.0
+        itemImageView.layer.cornerRadius = AppStyles.itemCornerRadius
         itemImageView.layer.masksToBounds = true
         
         

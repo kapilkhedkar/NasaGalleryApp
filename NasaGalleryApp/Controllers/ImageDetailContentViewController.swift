@@ -16,6 +16,8 @@ class ImageDetailContentViewController: UIViewController {
     
     var pageIndex : Int = 0
     var imageUrl : String = ""
+    
+    var contentToPageDelegate : DetailsContentToMainProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,8 @@ class ImageDetailContentViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        contentToPageDelegate?.updatePageIndex(pageIndex: self.pageIndex)
         
         if !imageUrl.isEmpty
         {

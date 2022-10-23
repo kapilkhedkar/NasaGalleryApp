@@ -21,7 +21,12 @@
 		5B60F6F32902925D00F26B4A /* GridItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */; };
 		5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F4290292B400F26B4A /* CommonFunctions.swift */; };
 		5B60F6F82902939800F26B4A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F72902939800F26B4A /* DataParser.swift */; };
+		5B6B89882905A0510060DF76 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B89862905A0510060DF76 /* Poppins-Light.ttf */; };
+		5B6B89892905A0510060DF76 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B6B89872905A0510060DF76 /* Poppins-Medium.ttf */; };
+		5B6B898B2905A0880060DF76 /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6B898A2905A0880060DF76 /* AppStyles.swift */; };
 		5B7777FF2905702A00B91924 /* ImageDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */; };
+		5B777802290575E600B91924 /* DetailsBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B777800290575E600B91924 /* DetailsBottomSheetViewController.swift */; };
+		5B777803290575E600B91924 /* DetailsBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B777801290575E600B91924 /* DetailsBottomSheetViewController.xib */; };
 		5BC81106290561B700DCA34C /* ImageDetailMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */; };
 		5BC811082905626400DCA34C /* ImageDetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +48,12 @@
 		5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B60F6F4290292B400F26B4A /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		5B60F6F72902939800F26B4A /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		5B6B89862905A0510060DF76 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		5B6B89872905A0510060DF76 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		5B6B898A2905A0880060DF76 /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
 		5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPageViewController.swift; sourceTree = "<group>"; };
+		5B777800290575E600B91924 /* DetailsBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBottomSheetViewController.swift; sourceTree = "<group>"; };
+		5B777801290575E600B91924 /* DetailsBottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsBottomSheetViewController.xib; sourceTree = "<group>"; };
 		5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailMainViewController.swift; sourceTree = "<group>"; };
 		5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailContentViewController.swift; sourceTree = "<group>"; };
 		7DC8CD614920EBAB28D45A94 /* Pods-NasaGalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaGalleryApp.release.xcconfig"; path = "Target Support Files/Pods-NasaGalleryApp/Pods-NasaGalleryApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5B08AB6B29026E8E00F5489B /* Info.plist */,
+				5B6B89852905A0420060DF76 /* Fonts */,
 				5B60F6F62902936500F26B4A /* Services */,
 				5B60F6E2290271F900F26B4A /* Common */,
 				5B60F6E12902717600F26B4A /* Project Files */,
@@ -114,10 +125,11 @@
 		5B60F6DB290270CB00F26B4A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B777804290575EC00B91924 /* Bottom Sheets */,
 				5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */,
 				5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */,
-				5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */,
 				5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */,
+				5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				5B60F6EA290273C600F26B4A /* Data */,
 				5B60F6E52902739B00F26B4A /* Lottie */,
 				5B60F6F4290292B400F26B4A /* CommonFunctions.swift */,
+				5B6B898A2905A0880060DF76 /* AppStyles.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -191,6 +204,24 @@
 				5B60F6F72902939800F26B4A /* DataParser.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		5B6B89852905A0420060DF76 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B6B89862905A0510060DF76 /* Poppins-Light.ttf */,
+				5B6B89872905A0510060DF76 /* Poppins-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5B777804290575EC00B91924 /* Bottom Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				5B777800290575E600B91924 /* DetailsBottomSheetViewController.swift */,
+				5B777801290575E600B91924 /* DetailsBottomSheetViewController.xib */,
+			);
+			path = "Bottom Sheets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +284,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B777803290575E600B91924 /* DetailsBottomSheetViewController.xib in Resources */,
 				5B60F6F32902925D00F26B4A /* GridItemCollectionViewCell.xib in Resources */,
 				5B08AB6A29026E8E00F5489B /* LaunchScreen.storyboard in Resources */,
+				5B6B89882905A0510060DF76 /* Poppins-Light.ttf in Resources */,
 				5B60F6EC290273D500F26B4A /* data.json in Resources */,
 				5B08AB6729026E8E00F5489B /* Assets.xcassets in Resources */,
+				5B6B89892905A0510060DF76 /* Poppins-Medium.ttf in Resources */,
 				5B08AB6529026E8B00F5489B /* Main.storyboard in Resources */,
 				5B60F6E8290273BA00F26B4A /* no-internet.json in Resources */,
 			);
@@ -312,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B7777FF2905702A00B91924 /* ImageDetailPageViewController.swift in Sources */,
+				5B777802290575E600B91924 /* DetailsBottomSheetViewController.swift in Sources */,
 				5BC81106290561B700DCA34C /* ImageDetailMainViewController.swift in Sources */,
+				5B6B898B2905A0880060DF76 /* AppStyles.swift in Sources */,
 				5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */,
 				5B60F6DF2902710E00F26B4A /* ImageGridViewController.swift in Sources */,
 				5B08AB5E29026E8B00F5489B /* AppDelegate.swift in Sources */,

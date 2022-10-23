@@ -18,14 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-n6-23C" customClass="AnimationView" customModule="Lottie">
-                                <rect key="frame" x="177" y="60" width="60" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Sbv-vZ-VXo"/>
-                                    <constraint firstAttribute="width" constant="60" id="ezN-8s-hpx"/>
-                                </constraints>
-                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-9s-eme" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -33,9 +25,24 @@
                                     <constraint firstAttribute="height" constant="200" id="3oE-FN-6gC"/>
                                     <constraint firstAttribute="width" constant="200" id="Jc6-3B-exT"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="no-internet"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6t-oP-sjQ">
+                                <rect key="frame" x="107" y="564" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HA1-bs-cWM"/>
+                                    <constraint firstAttribute="height" constant="40" id="t32-9K-pPD"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="retryButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTl-xQ-ETm"/>
+                                </connections>
+                            </button>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-VW-NXw">
-                                <rect key="frame" x="0.0" y="136" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DQU-pR-FOE">
                                     <size key="itemSize" width="128" height="128"/>
@@ -58,28 +65,128 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CnH-n6-23C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5So-UN-5Sz"/>
                             <constraint firstItem="iWy-9s-eme" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8N7-Qm-yP2"/>
                             <constraint firstItem="iWy-9s-eme" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Yt-Lb-sVC"/>
                             <constraint firstItem="YEP-VW-NXw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AzB-0a-hkS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YEP-VW-NXw" secondAttribute="bottom" id="TmI-hg-2Bz"/>
+                            <constraint firstItem="YEP-VW-NXw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Y0H-c9-hKE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YEP-VW-NXw" secondAttribute="trailing" id="aEg-xr-vYJ"/>
-                            <constraint firstItem="YEP-VW-NXw" firstAttribute="top" secondItem="CnH-n6-23C" secondAttribute="bottom" constant="16" id="fmW-25-OpU"/>
-                            <constraint firstItem="CnH-n6-23C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mO9-X5-Mdg"/>
+                            <constraint firstItem="h6t-oP-sjQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ehk-IF-7sW"/>
+                            <constraint firstItem="h6t-oP-sjQ" firstAttribute="top" secondItem="iWy-9s-eme" secondAttribute="bottom" constant="16" id="qgA-kT-CgG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="YEP-VW-NXw" id="voZ-yq-dMC"/>
-                        <outlet property="logoAnimationView" destination="CnH-n6-23C" id="fMb-mf-8Vs"/>
                         <outlet property="noInternetAnimationView" destination="iWy-9s-eme" id="Ol9-yR-oti"/>
+                        <outlet property="retryButton" destination="h6t-oP-sjQ" id="IW7-z0-uD0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="68"/>
         </scene>
+        <!--Image Detail Content View Controller-->
+        <scene sceneID="Yzh-WT-JS9">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailContentViewController" id="dKm-V6-csI" customClass="ImageDetailContentViewController" customModule="NasaGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WX7-Gf-RnS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-r4-rIY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HpB-Xj-COB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b6z-r4-rIY" firstAttribute="trailing" secondItem="HpB-Xj-COB" secondAttribute="trailing" id="83S-EY-qpp"/>
+                            <constraint firstItem="b6z-r4-rIY" firstAttribute="top" secondItem="HpB-Xj-COB" secondAttribute="top" id="YRu-3T-erF"/>
+                            <constraint firstItem="b6z-r4-rIY" firstAttribute="leading" secondItem="HpB-Xj-COB" secondAttribute="leading" id="hDp-0t-FMx"/>
+                            <constraint firstItem="HpB-Xj-COB" firstAttribute="bottom" secondItem="b6z-r4-rIY" secondAttribute="bottom" id="wsD-Ub-3Gb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="b6z-r4-rIY" id="iyF-F6-VGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4b-CY-3EL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2561" y="68"/>
+        </scene>
+        <!--Image Detail Main View Controller-->
+        <scene sceneID="CQp-FD-jzK">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailMainViewController" id="ogE-V2-jsx" customClass="ImageDetailMainViewController" customModule="NasaGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lmm-Gq-EId">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMb-QO-8fW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <segue destination="jN1-gM-Gtf" kind="embed" identifier="containerSegue" id="xca-ag-0SX"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-I1-sxU">
+                                <rect key="frame" x="16" y="60" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OtN-xF-ujd"/>
+                                    <constraint firstAttribute="width" constant="40" id="dQK-dB-pbN"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="ogE-V2-jsx" eventType="touchUpInside" id="5Me-mO-2Sc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-ss-8Jj">
+                                <rect key="frame" x="373" y="60" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1dP-or-djD"/>
+                                    <constraint firstAttribute="width" constant="25" id="rtw-ts-fQL"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="ic_info"/>
+                                <connections>
+                                    <action selector="infoButtonTapped:" destination="ogE-V2-jsx" eventType="touchUpInside" id="pH5-dh-7K2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="85X-ho-GJO"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GEA-I1-sxU" firstAttribute="leading" secondItem="85X-ho-GJO" secondAttribute="leading" constant="16" id="18W-EE-sVX"/>
+                            <constraint firstItem="GEA-I1-sxU" firstAttribute="top" secondItem="85X-ho-GJO" secondAttribute="top" constant="16" id="9yB-A1-w86"/>
+                            <constraint firstItem="aMb-QO-8fW" firstAttribute="leading" secondItem="85X-ho-GJO" secondAttribute="leading" id="DtH-4c-FIp"/>
+                            <constraint firstItem="85X-ho-GJO" firstAttribute="trailing" secondItem="6gM-ss-8Jj" secondAttribute="trailing" constant="16" id="MpP-di-JVe"/>
+                            <constraint firstItem="85X-ho-GJO" firstAttribute="trailing" secondItem="aMb-QO-8fW" secondAttribute="trailing" id="W1i-sh-ISS"/>
+                            <constraint firstItem="aMb-QO-8fW" firstAttribute="top" secondItem="85X-ho-GJO" secondAttribute="top" id="e65-sb-H0Z"/>
+                            <constraint firstItem="85X-ho-GJO" firstAttribute="bottom" secondItem="aMb-QO-8fW" secondAttribute="bottom" id="hPG-VS-7yi"/>
+                            <constraint firstItem="6gM-ss-8Jj" firstAttribute="top" secondItem="85X-ho-GJO" secondAttribute="top" constant="16" id="z1L-ch-0Cz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="GEA-I1-sxU" id="dSv-oi-11D"/>
+                        <outlet property="infoButton" destination="6gM-ss-8Jj" id="PYH-FP-yK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jS-D3-tas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="68"/>
+        </scene>
+        <!--Image Detail Page View Controller-->
+        <scene sceneID="uMx-kF-yqb">
+            <objects>
+                <pageViewController storyboardIdentifier="ImageDetailPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="jN1-gM-Gtf" customClass="ImageDetailPageViewController" customModule="NasaGalleryApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jYS-dB-gS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="68"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ic_back" width="30" height="30"/>
+        <image name="ic_info" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,13 +15,15 @@
 		5B60F6DF2902710E00F26B4A /* ImageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */; };
 		5B60F6E42902720900F26B4A /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6E32902720900F26B4A /* Connectivity.swift */; };
 		5B60F6E8290273BA00F26B4A /* no-internet.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6E6290273B900F26B4A /* no-internet.json */; };
-		5B60F6E9290273BA00F26B4A /* nasa-logo.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6E7290273BA00F26B4A /* nasa-logo.json */; };
 		5B60F6EC290273D500F26B4A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6EB290273D500F26B4A /* data.json */; };
 		5B60F6EE290273F200F26B4A /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6ED290273F200F26B4A /* ImageData.swift */; };
 		5B60F6F22902925D00F26B4A /* GridItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F02902925D00F26B4A /* GridItemCollectionViewCell.swift */; };
 		5B60F6F32902925D00F26B4A /* GridItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */; };
 		5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F4290292B400F26B4A /* CommonFunctions.swift */; };
 		5B60F6F82902939800F26B4A /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B60F6F72902939800F26B4A /* DataParser.swift */; };
+		5B7777FF2905702A00B91924 /* ImageDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */; };
+		5BC81106290561B700DCA34C /* ImageDetailMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */; };
+		5BC811082905626400DCA34C /* ImageDetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +37,15 @@
 		5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridViewController.swift; sourceTree = "<group>"; };
 		5B60F6E32902720900F26B4A /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		5B60F6E6290273B900F26B4A /* no-internet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "no-internet.json"; sourceTree = "<group>"; };
-		5B60F6E7290273BA00F26B4A /* nasa-logo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nasa-logo.json"; sourceTree = "<group>"; };
 		5B60F6EB290273D500F26B4A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		5B60F6ED290273F200F26B4A /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		5B60F6F02902925D00F26B4A /* GridItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B60F6F12902925D00F26B4A /* GridItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		5B60F6F4290292B400F26B4A /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		5B60F6F72902939800F26B4A /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailPageViewController.swift; sourceTree = "<group>"; };
+		5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailMainViewController.swift; sourceTree = "<group>"; };
+		5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailContentViewController.swift; sourceTree = "<group>"; };
 		7DC8CD614920EBAB28D45A94 /* Pods-NasaGalleryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaGalleryApp.release.xcconfig"; path = "Target Support Files/Pods-NasaGalleryApp/Pods-NasaGalleryApp.release.xcconfig"; sourceTree = "<group>"; };
 		F39A1F142BB475C0567F6D51 /* Pods_NasaGalleryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NasaGalleryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				5B60F6DE2902710E00F26B4A /* ImageGridViewController.swift */,
+				5BC81105290561B700DCA34C /* ImageDetailMainViewController.swift */,
+				5BC811072905626400DCA34C /* ImageDetailContentViewController.swift */,
+				5B7777FE2905702A00B91924 /* ImageDetailPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,7 +171,6 @@
 		5B60F6E52902739B00F26B4A /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				5B60F6E7290273BA00F26B4A /* nasa-logo.json */,
 				5B60F6E6290273B900F26B4A /* no-internet.json */,
 			);
 			path = Lottie;
@@ -251,7 +257,6 @@
 				5B08AB6A29026E8E00F5489B /* LaunchScreen.storyboard in Resources */,
 				5B60F6EC290273D500F26B4A /* data.json in Resources */,
 				5B08AB6729026E8E00F5489B /* Assets.xcassets in Resources */,
-				5B60F6E9290273BA00F26B4A /* nasa-logo.json in Resources */,
 				5B08AB6529026E8B00F5489B /* Main.storyboard in Resources */,
 				5B60F6E8290273BA00F26B4A /* no-internet.json in Resources */,
 			);
@@ -306,10 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B7777FF2905702A00B91924 /* ImageDetailPageViewController.swift in Sources */,
+				5BC81106290561B700DCA34C /* ImageDetailMainViewController.swift in Sources */,
 				5B60F6F5290292B400F26B4A /* CommonFunctions.swift in Sources */,
 				5B60F6DF2902710E00F26B4A /* ImageGridViewController.swift in Sources */,
 				5B08AB5E29026E8B00F5489B /* AppDelegate.swift in Sources */,
 				5B60F6F22902925D00F26B4A /* GridItemCollectionViewCell.swift in Sources */,
+				5BC811082905626400DCA34C /* ImageDetailContentViewController.swift in Sources */,
 				5B60F6E42902720900F26B4A /* Connectivity.swift in Sources */,
 				5B60F6F82902939800F26B4A /* DataParser.swift in Sources */,
 				5B60F6EE290273F200F26B4A /* ImageData.swift in Sources */,

@@ -13,5 +13,6 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'PanModal'
 pod 'SDWebImage', '~> 5.0'
 pod 'RappleProgressHUD'
+pod 'Zoomy'
 
 end

@@ -8,13 +8,13 @@
 import UIKit
 import Lottie
 import SDWebImage
+import RappleProgressHUD
 
 class ImageGridViewController: UIViewController {
 
-    @IBOutlet weak var logoAnimationView: AnimationView!
     @IBOutlet weak var noInternetAnimationView: AnimationView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var retryButton: UIButton!
     //
     
     var imageDataArray = [ImageDataItem]()
@@ -31,7 +31,23 @@ class ImageGridViewController: UIViewController {
         
         collectionView.collectionViewLayout = CommonFunctions.createCompositionalLayout()
         
+        setupUI()
+        
         getSpaceDataFromJSON()
+        
+    }
+    
+    func setupUI()
+    {
+        noInternetAnimationView.contentMode = .scaleAspectFit
+        noInternetAnimationView.loopMode = .loop
+        noInternetAnimationView.play()
+        
+        retryButton.backgroundColor = UIColor.red
+        retryButton.layer.cornerRadius = 8.0
+        retryButton.layer.masksToBounds = true
+        retryButton.tintColor = UIColor.white
+        retryButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
         
     }
     
@@ -40,17 +56,35 @@ class ImageGridViewController: UIViewController {
         if Connectivity.isConnectedToInternet
         {
             noInternetAnimationView.isHidden = true
+            retryButton.isHidden = true
             collectionView.isHidden = false
+
+            RappleActivityIndicatorView.startAnimating()
             
             self.imageDataArray = DataParser.getImagesData()
             self.collectionView.reloadData()
             
+            self.collectionView.performBatchUpdates(nil, completion: {
+                (result) in
+                // ready
+                RappleActivityIndicatorView.stopAnimation()
+            })
+
         }else
         {
             noInternetAnimationView.isHidden = false
+            retryButton.isHidden = false
             collectionView.isHidden = true
-            
+
         }
+        
+    }
+    
+    // MARK: - Clicks
+    
+    @IBAction func retryButtonTapped(_ sender: UIButton) {
+        
+        getSpaceDataFromJSON()
         
     }
     
@@ -79,10 +113,18 @@ extension ImageGridViewController : UICollectionViewDataSource,UICollectionViewD
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridItemCollectionViewCell", for: indexPath) as! GridItemCollectionViewCell
         
         let dataItem = imageDataArray[indexPath.row]
-        
-        cell.itemImageView.sd_setImage(with: URL(string: dataItem.hdurl))
-        
+        cell.itemImageView.sd_setImage(with: URL(string: dataItem.hdurl), placeholderImage: nil, options: [.progressiveLoad])
         return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailMainViewController = self.storyboard?.instantiateViewController(withIdentifier: "ImageDetailMainViewController") as! ImageDetailMainViewController
+        detailMainViewController.imageDataArray = self.imageDataArray
+        detailMainViewController.selectedPageIndex = indexPath.row
+        detailMainViewController.modalPresentationStyle = .fullScreen
+        self.present(detailMainViewController, animated: true)
         
     }
     
